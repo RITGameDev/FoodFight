@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
 Project("{82FEDB6E-8D53-8987-D305-0DE3AD103C93}") = "FoodFight", "Assembly-CSharp.csproj", "{C0F90AA8-3F5A-6722-5497-8370AF7C69D1}"
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFight", "FoodFight.csproj", "{325F16F6-DACE-1295-6721-35D5B304046D}"
+>>>>>>> master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +16,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{C0F90AA8-3F5A-6722-5497-8370AF7C69D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C0F90AA8-3F5A-6722-5497-8370AF7C69D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0F90AA8-3F5A-6722-5497-8370AF7C69D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0F90AA8-3F5A-6722-5497-8370AF7C69D1}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{325F16F6-DACE-1295-6721-35D5B304046D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325F16F6-DACE-1295-6721-35D5B304046D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325F16F6-DACE-1295-6721-35D5B304046D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325F16F6-DACE-1295-6721-35D5B304046D}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> master
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
+=======
+>>>>>>> master
 EndGlobal
