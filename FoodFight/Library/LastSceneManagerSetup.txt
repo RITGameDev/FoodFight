@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/CalebScene.unity
+- path: Assets/Scenes/Ben_Test_Scene.unity
   isLoaded: 1
   isActive: 1
