@@ -112,19 +112,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4163595098706958, guid: f9e406349278bd1428b994af5ec66105, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4163595098706958, guid: f9e406349278bd1428b994af5ec66105, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4163595098706958, guid: f9e406349278bd1428b994af5ec66105, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.35668558
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4163595098706958, guid: f9e406349278bd1428b994af5ec66105, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9342245
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4163595098706958, guid: f9e406349278bd1428b994af5ec66105, type: 2}
       propertyPath: m_RootOrder
@@ -136,7 +136,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4163595098706958, guid: f9e406349278bd1428b994af5ec66105, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 41.794003
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9e406349278bd1428b994af5ec66105, type: 2}
@@ -256,6 +256,17 @@ MonoBehaviour:
   speed: 10
   jumpForce: {x: 0, y: 10}
   jumpLimit: 0.3
+--- !u!114 &1682383417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1682383412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7623380708ff2f4aa5221b26d60e282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926890237
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,11 +363,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4164565708406596, guid: f40792237ec37d641b86ecb7f9f194b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.41
+      value: -6.76
       objectReference: {fileID: 0}
     - target: {fileID: 4164565708406596, guid: f40792237ec37d641b86ecb7f9f194b0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.779396
+      value: 2.78
       objectReference: {fileID: 0}
     - target: {fileID: 4164565708406596, guid: f40792237ec37d641b86ecb7f9f194b0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -381,6 +392,10 @@ Prefab:
     - target: {fileID: 4164565708406596, guid: f40792237ec37d641b86ecb7f9f194b0, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724894837901784, guid: f40792237ec37d641b86ecb7f9f194b0, type: 2}
+      propertyPath: m_TagString
+      value: Meatball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f40792237ec37d641b86ecb7f9f194b0, type: 2}
