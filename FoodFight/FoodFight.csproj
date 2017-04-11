@@ -73,11 +73,18 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameState.cs" />
     <Compile Include="Assets\Scripts\Meatball\Meatball.cs" />
-    <Compile Include="Assets\Scripts\Menu\PlayerSelectScreen.cs" />
+    <Compile Include="Assets\Scripts\Menu\MainMenuFunctions.cs" />
+    <Compile Include="Assets\Scripts\Menu\PlayerSelection\PlayerOptionContainer.cs" />
+    <Compile Include="Assets\Scripts\Menu\PlayerSelection\PlayerPanel.cs" />
+    <Compile Include="Assets\Scripts\Menu\PlayerSelection\PlayerSelectScreen.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

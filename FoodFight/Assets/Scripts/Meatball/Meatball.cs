@@ -17,9 +17,6 @@ using UnityEngine;
 public class Meatball : MonoBehaviour
 {
     [SerializeField]
-    private float lifetime = 5f;    // How long htis object will stay active for after it is enabled
-
-    [SerializeField]
     private float shotForce = 5f;   // Scale of the force added to the meatball
 
     private Rigidbody2D rb;         // The rigidboyd 2d of this gameobejct
@@ -43,20 +40,6 @@ public class Meatball : MonoBehaviour
     {
         // Add a force in the forward direction 
         rb.AddForce(transform.right * shotForce, ForceMode2D.Impulse);
-
-        // Disable this after our lifetime
-        Invoke("Death", lifetime);
-    }
-
-
-    /// <summary>
-    /// Set this object as in-active so we can use it again
-    /// </summary>
-    private void Death()
-    {
-        // Play some kind of animation
-
-        gameObject.SetActive(false);
     }
 
 }
