@@ -5,12 +5,18 @@ using UnityEngine;
 /// <summary>
 /// This script will create the players of a certain type
 /// based on what the players have selected on the previous screen
+/// 
+/// Author: Ben Hoffman
 /// </summary>
 public class GameManager : MonoBehaviour {
 
-    public static GameManager gameManager;
+    public static GameManager gameManager;      // A public static reference this so taht we can check the state anywhere
 
-    public int countDowntime = 3;
+    public int countDowntime = 3;               // The number of seconds that it will take to start the game
+
+    private GameState _currentGameState;        // The current state of the game
+
+    public GameState CurrentGameState { get { return _currentGameState; } }
 
     /// <summary>
     /// Set the static reference to this game manager so that we can reference it anywhere
@@ -25,6 +31,15 @@ public class GameManager : MonoBehaviour {
         }
         else if (gameManager != this)
             Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// Set the current game state to the start menu on start
+    /// </summary>
+    private void Start()
+    {
+        // Set current state to the start menu
+        _currentGameState = GameState.StartMenu;
     }
 
     /// <summary>
@@ -64,12 +79,17 @@ public class GameManager : MonoBehaviour {
 
     }
 
+
+
     /// <summary>
     /// Wait the number of seconds for before we start the game
     /// </summary>
     /// <returns></returns>
     private IEnumerator CountDown()
     {
+        // Set the current game state to the 'count down phase'
+        _currentGameState = GameState.StartCountDown;
+
         // For as many seconds as we want for the countdown time
         for(int i = 0; i < countDowntime; i++)
         {
@@ -78,5 +98,9 @@ public class GameManager : MonoBehaviour {
             // Set the text/image to the countDowntime - (i + 1)
         }
 
+        // Set the game state to playings
+        _currentGameState = GameState.Play;
+
     }
+
 }
