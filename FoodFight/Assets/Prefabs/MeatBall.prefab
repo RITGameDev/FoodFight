@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114818122720816466}
   - component: {fileID: 198141738371844236}
   - component: {fileID: 199679164505399172}
+  - component: {fileID: 114836853612711870}
   m_Layer: 0
   m_Name: MeatBall
   m_TagString: Meatball
@@ -119,8 +120,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec8ff073fd15cf429ed3ae70769537f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
   shotForce: 5
+--- !u!114 &114836853612711870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724894837901784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d15f7704ec54b4a93b7a3ec04f56fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 5
 --- !u!198 &198141738371844236
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -13,8 +13,10 @@ public class ObjectPool : MonoBehaviour {
 
     public GameObject pooledObject;    // The object that we want to pool
     public int poolAmount = 5;         // The amount of those objects that we want to pool
+    public bool willGrow;              // If this is true then we will add more meatballs when they are 
 
     private List<GameObject> objectPool;   // A stack of those objects 
+
 
 	/// <summary>
     /// Create our object pool and instantiate the specified number of objects
@@ -56,26 +58,30 @@ public class ObjectPool : MonoBehaviour {
     public GameObject GetPooledObject()
     {
         // if there is something in our pool
-        for(int i =0; i < objectPool.Capacity; i++)
+        for( int i = 0; i < objectPool.Count; i++ )
         {
             // If this object is NOT active in teh hierachy
-            if (!objectPool[i].activeInHierarchy)
+            if ( !objectPool[i].activeInHierarchy )
             {
                 // return it
-                return objectPool[i];
+                return objectPool[ i ];
             }
         }
 
-        // If we have gotten through the whole object pool and not found one, then make a new obj
-        GameObject temp = (GameObject)Instantiate(pooledObject);
+        if( willGrow )
+        {
+            // If we have gotten through the whole object pool and not found one, then make a new obj
+            GameObject temp = ( GameObject ) Instantiate(pooledObject);
 
-        // Set the object as inactive
-        temp.SetActive(false);
+            // Add the object to our pool
+            objectPool.Add(temp);
+            temp.SetActive(false);
+            // Return it
+            return temp;
+        }
 
-        // Add the object to our pool
-        objectPool.Add(temp);
-
-        // Return it
-        return temp;
+        // In the end, if we do not want to grow and we have used everything,
+        // then return null
+        return null;
     }
 }

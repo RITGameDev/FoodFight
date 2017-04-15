@@ -167,6 +167,7 @@ MonoBehaviour:
   pooledObject: {fileID: 1724894837901784, guid: f40792237ec37d641b86ecb7f9f194b0,
     type: 2}
   poolAmount: 5
+  willGrow: 1
 --- !u!4 &501742358
 Transform:
   m_ObjectHideFlags: 0
