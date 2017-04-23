@@ -23,13 +23,16 @@ public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D rb; // Store a reference to the Rigidbody2D componeent
 
+    //String Names are found in Edit.ProjectSettings.Input
     private string horizontal_input_string = "Horizontal";  // The horizontal input axis
     private string vertical_input_string = "Vertical";      // The vertical input axis
-    private string jump_input_string = "Jump";                  // The jump iunput axis
-        
+    private string jump_input_string = "Jump";              // The jump iunput axis
+    
+
     private RaycastHit2D _jumpCheck_output; // The ray hit information about if we can jump or not
     private Vector3 _rayOffset;             // The size of the collider so that we can offset it when we shoot a ray
-
+    private Collider2D myCollider;         //The Capsule Collider Attached
+    
     #endregion
 
     /// <summary>
@@ -42,7 +45,11 @@ public class PlayerMovement : MonoBehaviour {
 
         // Get the colliders size so that we know it for shooting rays
         _rayOffset.y = -GetComponent<CapsuleCollider2D>().size.y;
-	}
+
+        // Get the collider
+        myCollider = GetComponent<CapsuleCollider2D>();
+
+    }
 	
     /// <summary>
     /// This method will handle things that the player will want instant 
@@ -50,11 +57,16 @@ public class PlayerMovement : MonoBehaviour {
     /// </summary>
     void Update()
     {
+        // Create a ray and store the results in a field           
+        _jumpCheck_output = Physics2D.Raycast(transform.position + _rayOffset, -Vector2.up, jumpLimit);
+
+        if (_jumpCheck_output.collider.tag == "Platform" & rb.velocity.y > 0.0f)
+            Physics2D.IgnoreCollision(myCollider, _jumpCheck_output.collider, false);
+
+
         // If the player presses the jump input, and we are not already in the air
-        if(Input.GetButtonDown(jump_input_string))
+        if (Input.GetButtonDown(jump_input_string))
         {
-            // Create a ray and store the results in a field           
-            _jumpCheck_output = Physics2D.Raycast(transform.position + _rayOffset, -Vector2.up,  jumpLimit);
 
             // If we are hitting something (we are on the ground)
             if (_jumpCheck_output.collider != null)
@@ -64,6 +76,17 @@ public class PlayerMovement : MonoBehaviour {
             }
 
         }
+
+        //Phasing through platforms like Super Smash
+        if (Input.GetButtonDown(vertical_input_string))
+        {
+
+            // If we are hitting "Platform" (we are on a platform and can drop)
+            if (_jumpCheck_output.collider.tag == "Platform")
+                Physics2D.IgnoreCollision(myCollider, _jumpCheck_output.collider,true);
+
+        }
+
     }
 
 	/// <summary>
@@ -84,4 +107,6 @@ public class PlayerMovement : MonoBehaviour {
         // Add a force to the rigidbody based on our player movement
         rb.AddForce(movement * speed);
     }
+
+
 }

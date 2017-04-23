@@ -46,9 +46,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\GameState.cs" />
+     <Compile Include="Assets\Scripts\Meatball\DisableAfterTime.cs" />
+     <Compile Include="Assets\Scripts\Meatball\Meatball.cs" />
+     <Compile Include="Assets\Scripts\Menu\MainMenuFunctions.cs" />
+     <Compile Include="Assets\Scripts\Menu\PlayerSelection\PlayerOptionContainer.cs" />
+     <Compile Include="Assets\Scripts\Menu\PlayerSelection\PlayerPanel.cs" />
+     <Compile Include="Assets\Scripts\Menu\PlayerSelection\PlayerSelectScreen.cs" />
+     <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-     <None Include="Assets\This is Calebs branch.txt" />
+     <Compile Include="Assets\Scripts\Player\PlayerWeaponController.cs" />
+     <Compile Include="Assets\Scripts\PlayerOption.cs" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
